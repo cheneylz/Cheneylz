@@ -1,0 +1,24 @@
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>外卖随机生成器</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+</head>
+
+<body>
+
+<h1>今天吃啥？</h1>
+<div>
+<p th:text="${randomLunch.getName()}"></p>
+</div>
+<input type="button" value="换一个" onclick="location=location">
+<form method="post" th:action="@{/addLunchInfo}">
+    <input type="text" name="lunchName">
+    <button type="submit">添加</button>
+</form>
+
+</body>
+
+</html>
